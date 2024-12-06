@@ -1,0 +1,70 @@
+<div class="heightm">
+    <div class="header" >
+        <div class="wave wave1"></div>
+    
+        <div class="auth-bloc" >
+            <div class="title">
+                <h1>Sign up</h1>
+            </div>
+    
+            <div class="auth-form">
+                <form   [formGroup]="signupForm" (ngSubmit)="onSubmit()" class="form form-change-password" >
+                    <div class="form-group">
+                        <input type="text" placeholder="Prénom" formControleName="firstname"  required="required" [ngClass]="{ 'is-invalid': submitted && signupForm.controls['firstname'].errors }">
+                        <div *ngIf="submitted && signupForm.controls['firstname'].errors" class="invalid-feedback">
+                            <div *ngIf="signupForm.controls['firstname'].errors.required" translate>  Prénom champ obligatoire </div>
+                        </div>
+                    </div>
+    
+                    <div class="form-group">
+                        <input type="text" placeholder="Nom" formControleName="lastname"  required="required" [ngClass]="{ 'is-invalid': submitted && signupForm.controls['lastname'].errors }">
+                        <div *ngIf="submitted && signupForm.controls['lastname'].errors" class="invalid-feedback">
+                            <div *ngIf="signupForm.controls['lastname'].errors.required" translate>  Nom champ obligatoire </div>
+                        </div>
+                    </div>
+    
+                    <div class="form-group">
+                        <input type="email" placeholder="email" formControleName="email" required="required" [ngClass]="{ 'is-invalid': submitted && signupForm.controls['email'].errors }">
+                        <div *ngIf="submitted && signupForm.controls['email'].errors" class="invalid-feedback">
+                            <div *ngIf="signupForm.controls['email'].errors.required" translate>  Email  champ obligatoire </div>
+                        </div>
+                    </div>
+    
+                    <div class="form-group">
+                        <input type="number" placeholder="Tel" formControleName="phone" [ngClass]="{ 'is-invalid': submitted && signupForm.controls['phone'].errors }">
+                        <div *ngIf="submitted && signupForm.controls['phone'].errors" class="invalid-feedback">
+                            <div *ngIf="signupForm.controls['phone'].errors.required" translate>  Tel  champ obligatoire </div>
+                        </div>
+                    </div>
+    
+                    <div class="form-group">
+                        <input type="number" placeholder="Cin" formControleName="cin" [ngClass]="{ 'is-invalid': submitted && signupForm.controls['cin'].errors }">
+                        <div *ngIf="submitted && signupForm.controls['cin'].errors" class="invalid-feedback">
+                            <div *ngIf="signupForm.controls['cin'].errors.required" translate>  C.I.N  champ obligatoire </div>
+                        </div>
+                    </div>
+    
+                    <div class="form-group">
+                        <input type="password" placeholder="Mot de passe" formControleName="password" [ngClass]="{ 'is-invalid': submitted && signupForm.controls['password'].errors }">
+                        <div *ngIf="submitted && signupForm.controls['password'].errors" class="invalid-feedback">
+                            <div *ngIf="signupForm.controls['password'].errors.required" translate>  Mot de passe champ obligatoire </div>
+                        </div>
+                    </div>
+    
+                    <div class="form-group">
+                        <input type="password" placeholder="Confirmer mot de passe" formControleName="confirmPassword" [ngClass]="{ 'is-invalid': submitted && signupForm.controls['confirmPassword'].errors }">
+                        <div *ngIf="submitted && signupForm.controls['confirmPassword'].errors" class="invalid-feedback" >
+                            <div *ngIf="signupForm.controls['confirmPassword'].errors.required" translate>  Confirmer mot de passe champ obligatoire </div>
+                        </div>
+                    </div>
+                    <div  class="col-md-12 text-center" >
+                        <button type="submit" class="primary-button" >Créer nouveau compte</button>
+                    </div>
+                   
+                </form>
+    
+             
+            </div>
+        </div>
+    </div>
+</div>

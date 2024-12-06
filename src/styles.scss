@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+@import "~@ng-select/ng-select/themes/default.theme.css";
+
+.primary-button {
+    background: red;
+    border: 0;
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+.heightm{
+    height: 100vh;
+}

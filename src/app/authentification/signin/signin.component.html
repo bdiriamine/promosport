@@ -1,0 +1,32 @@
+<div  class="heightm ">
+    <div class="header">
+        <div class="wave wave1"></div>
+        <div class="auth-bloc">
+            <div class="title">
+                <h1>Sign in</h1>
+            </div>
+            <div class="auth-form">
+                <form [formGroup]="signinForm" (ngSubmit)="onSubmit()" class="form form-change-password">
+                    <div class="form-group">
+                        <input type="text" placeholder="Email" formControleName="email" required="required"
+                            [ngClass]="{ 'is-invalid': submitted && signinForm.controls['email'].errors }">
+                        <div *ngIf="submitted && signinForm.controls['email'].errors" class="invalid-feedback">
+                            <div *ngIf="signinForm.controls['email'].errors.required" translate> Email champ obligatoire </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="password" placeholder="Mot de passe" formControleName="password" required="required"
+                            [ngClass]="{ 'is-invalid': submitted && signinForm.controls['password'].errors }">
+                        <div *ngIf="submitted && signinForm.controls['password'].errors" class="invalid-feedback">
+                            <div *ngIf="signinForm.controls['password'].errors.required" translate> Mot de passe champ obligatoire </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 text-center">
+                        <button type="submit" class="primary-button">Se connecter</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

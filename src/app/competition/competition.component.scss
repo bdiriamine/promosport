@@ -1,0 +1,50 @@
+.sport {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    padding-top: 20px;
+    position: relative;
+
+    &__left-side {
+        border: 1px solid #dfdfdf;
+    }
+}
+
+span.bet-slip {
+    // background: #111010;
+    background: #d8d8d8;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile-selections {
+    position: fixed;
+    bottom: 10px;
+    width: 75vw;
+    justify-content: center;
+    padding-right: 30px;
+    z-index: 99;
+}
+
+@media (max-width: 991px) {
+    .web-selections {
+        display: none;
+    }
+    .sport {
+        display: block !important;
+    }
+    .mobile-selections {
+        display: flex !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .mobile-selections {
+        width: 80%;
+        display: none;
+    }
+}

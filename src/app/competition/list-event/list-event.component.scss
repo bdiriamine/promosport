@@ -1,0 +1,65 @@
+.cardtext {
+	font-family: "Roboto", sans-serif;
+	font-weight: 600;
+	color: #000000;
+	list-style: none;
+	display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+.card-body {
+	font-family: "Roboto", sans-serif;
+	font-weight: 600;
+	color: #000000;
+	list-style: none;
+	display: flex;
+    flex-direction: column;
+}
+
+.txtcenter {
+    align-items: center;
+    display: flex;
+}
+
+.flexcenter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    flex-direction: column;
+}
+
+.card-footer {
+    // height: 85px;
+	display: flex;
+	align-items: center;
+}
+
+.bet {
+    border: 1px solid #000;
+    background: #ffffff;
+    font-size: 0.8rem;
+    color: #000;
+}
+
+.bet:nth-child(2) {
+    color: #e01a22;
+}
+
+.bet:hover {
+    border: 1px solid #000;
+    background: #fff;
+    color: #e01a22 !important;
+}
+.bets-buttons {
+    display: flex;
+}
+
+.card-body p:nth-child(1){
+    color: #e01a22;
+}
+.card-body p:nth-child(2){
+    font-size: 0.8rem;
+    color: #5a5a5a;
+}

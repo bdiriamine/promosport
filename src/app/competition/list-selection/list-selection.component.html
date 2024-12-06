@@ -1,0 +1,36 @@
+<div class="betslip mb-5">
+    <div class="card">
+      <div class="card-body">
+        <table class="table table-striped table-light">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col">event</th>
+              <th scope="col">Selection</th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let selection of selections ; let i = index">
+              <th>{{ i }}</th>
+              <td>{{ selection.firstTeam}} - {{ selection.secondTeam }}</td>
+              <td>{{selection.bet}} </td>
+              <td (click)="removeBet(selection)">
+                <a data-toggle="tooltip" data-placement="top" title="Annuler">
+                  <img src="https://img.icons8.com/office/16/000000/cancel.png" />
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="card-body txtright">
+          <p style="color:#000000 ;">Total = {{ bet }}</p>
+          <div class="cardtext" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-success mx-3">Accept</button>
+            <button type="button" (click)="resetBet()" class="btn btn-danger">cancel</button>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  </div>

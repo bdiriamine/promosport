@@ -1,0 +1,43 @@
+<nav class="navbar text-white">
+    <div class="ps-nav container">
+      <div class="navbar-brand fw-bold" [routerLink]="['/']">
+        <a>
+          <span style="color:#e01a22 ;">P</span>
+          <span style="color:#e01a22 ;">R</span>
+          <span style="color:#e01a22 ;">O</span>
+          <span style="color:#e01a22 ;">M</span>
+          <span style="color:#e01a22 ;">O</span>
+          <span [style.color]=" logoColor ">S</span>
+          <span [style.color]=" logoColor ">P</span>
+          <span [style.color]=" logoColor ">O</span>
+          <span [style.color]=" logoColor ">R</span>
+          <span [style.color]=" logoColor ">T</span>
+        </a>
+      </div>
+  
+  
+      <ul class="nav-links d-flex m-0" (click)="clickEvent()" [ngClass]="status ? 'show' : 'hide'">
+        <i class="hide-toggle gg-close "></i>
+        <li class="nav-link" [style.color]=" logoColor " [routerLink]="['/']">Sport</li>
+        <li class="nav-link" [style.color]=" logoColor ">Nous contactez</li>
+        <li class="nav-link" [style.color]=" logoColor " [routerLink]="['/signin']">Se connecter</li>
+        <li class="nav-link" [style.color]=" logoColor " [routerLink]="['/signup']" translate >Créer compte</li>
+        <li class="lang-item p-0">
+          <div class="lang">
+            <ng-select class="custom" (change)="switchLang($event)" [(ngModel)]="selectedLng" [hideSelected]="false" [clearable]="false" [searchable]="false">
+              <ng-option value="ar">
+                <img src="https://img.icons8.com/color/20/000000/tunisia.png"/>
+              </ng-option>
+              <ng-option value="fr">
+                <img src="https://m.carthagobet.tn/assets/images/france.png" width=20px;>
+              </ng-option>
+            </ng-select>
+          </div>
+        </li>
+      </ul>
+  
+      <div class="menu-toggle" [style.color]=" logoColor " (click)="clickEvent()" [ngClass]="status ? 'hide' : 'show'">
+        <i class="d-sm-block d-sm-none gg-menu-right"></i>
+      </div>
+    </div>
+  </nav>
